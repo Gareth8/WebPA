@@ -46,8 +46,8 @@ class User
     * @param string $username
     * @param string $passsword
     */
-    //changed $password to be passed as an empty string, as an exception gets thrown if null is used
-    public function __construct($username = null, $password = "")
+    //Changed $username and $password to default to an empty string instead of null, as the database does not allow for them to be set to null values
+    public function __construct($username = "", $password = "")
     {
         $this->username = $username;
         $this->source_id = '';
